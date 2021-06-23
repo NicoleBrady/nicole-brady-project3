@@ -1,25 +1,117 @@
-import logo from './logo.svg';
 import './App.css';
+import firebase from './firebase'
+import { useState, useEffect } from 'react';
+import Header from './Header.js';
+import Store from './Store.js';
+import Checkout from './Checkout.js';
+import logo from './logo.png';
 
 function App() {
+
+const [groceryItems, setGroceryItems] = useState([]);
+const [checkoutItems, setCheckoutItems] = useState([]);
+
+
+// create function for when an item is clicked, that item is pushed to setCheckoutItems array
+useEffect ( () => {
+
+}, [checkoutItems])
+
+const addToCart = (item) => {
+  
+const current = [...checkoutItems]
+
+setCheckoutItems([...current, item]);
+}
+
+useEffect ( () => {
+// reference to firebase database
+const dbRef = firebase.database().ref()
+// an event listener watching for change in database
+dbRef.on ('value', (response) => {
+// this variable holds response value from firebase
+const data = response.val();
+// variable to grab grocery object from response
+const groceries = data.Grocery;
+// empty array to store grocery items
+const itemArray = []
+// loop through the groceries object
+// push each item (key) and details to itemArray
+for (let item in groceries) {
+  itemArray.push({key: item, price: groceries[item].price, image: groceries[item].img})
+}
+// update state by passing itemArray into setGroceryItems
+setGroceryItems(itemArray);
+})
+}, [])
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <main id = "main">
+        <section className="Store">
+          <div className = "storeHeader">
+            <img src = {logo} ></img>
+            <h1><span>No</span>Thrills</h1>
+          </div>
+          <ul>
+            {
+              groceryItems.map(item => {
+                return (
+                  <Store 
+                  imgSrc = { item.image }
+                  price = { item.price }
+                  key = { item.key }
+                  name = { item.key }
+                  id = { item.key }
+                  addToCart = { () => addToCart(item)}
+                  // isActive = { isActive }
+                  />
+                )
+              })
+            }
+          </ul>
+        </section>
+        <aside className = "Cart">
+          <div className = "cartHeader">
+            <h3>Your Cart</h3>
+            <i className="fas fa-shopping-cart"></i>
+          </div>
+          <ul>
+            {
+              checkoutItems.map(item => {
+                return (
+                  <Checkout
+                  price = { item.price }
+                  key = { item.key }
+                  name = { item.key }
+                  id = { item.key }
+                  // addToCart = { () => addToCart(item) }
+                  />
+                )
+              })
+            }
+          </ul>
+        </aside>
+      </main>
+      
     </div>
   );
 }
 
 export default App;
+
+
+// var total = checkoutItems.reduce(function(previousValue, currentValue) {
+//   return {
+//     price: previousValue.price + currentValue.price,
+//   }
+// }, 0);
+// console.log(total)
+
+
+
+
+
+

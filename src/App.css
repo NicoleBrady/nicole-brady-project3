@@ -1,38 +1,288 @@
-.App {
-  text-align: center;
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */
+input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+
+/* font-family: 'Open Sans', sans-serif;
+font-family: 'Montserrat', sans-serif; */
+
+
+/* GENERAL STYLES */
+
+html {
+    font-size: 125%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+	font-family: 'Open Sans', sans-serif;
+	color:#000;
+	font-size: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1,
+h2 {
+    font-weight: 800;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h2 {
+    font-size: 3.75rem;
 }
 
-.App-link {
-  color: #61dafb;
+h3 {
+    font-weight: 700;
+    font-size: 0.8rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.wrapper{
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+}
+
+ul,
+h1,
+h2,
+h3 {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    background: transparent;
+    border: none;
+}
+
+/* HEADER STYLES */
+
+header {
+    background: #65c3cf;
+}
+
+.flexHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 480px;
+    padding-top: 40px;
+    margin: 0 80px;
+    gap: 100px;
+}
+
+header h2 {
+    color: #fbc4d0;
+    line-height: 4rem;
+}
+
+header p {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    text-align: justify;
+}
+
+.headerIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header i {
+    font-size: 4rem;
+    color: #000;
+}
+
+/* STORE STYLES */
+main {
+    display: flex;
+    gap: 20px;
+}
+
+.storeHeader {
+    display: flex;
+    align-items: center;
+    margin: 40px 0 20px 30px;
+}
+
+.storeHeader h1 {
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+
+.storeHeader h1 span {
+    color: #da281c;
+}
+
+.storeHeader img {
+    width: 80px;
+}
+
+.Store,
+.Cart {
+    margin: 20px 0;
+    border-radius: 40px;
+    border: 4px solid black;
+    box-shadow: 10px 10px 0px 4px #343434;
+}
+
+.Store {
+    background: #ffdd00;
+    flex-basis: 70%;
+    margin-left: 20px;
+}
+
+.Store ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 80px;
+}
+
+.Store ul li {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.Store h3 {
+    text-align: center;
+}
+
+.imgContainer {
+    width: 150px;
+    min-width: 100px;
+    margin: 10px;
+}
+
+.detailsContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px;
+}
+
+.priceContainer {
+    background: #da281c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.priceContainer p {
+    color:#ffdd00;
+    font-weight: 700;
+}
+
+.detailsContainer button {
+    color: #292f33;
+    font-size: 1.4rem;
+}
+
+.message {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+}
+
+.message .popupMessage {
+        /* visibility: hidden; */
+        width: 160px;
+        background-color: #555;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 8px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -80px;
+}
+
+.message .popupMessage::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.message .show {
+    visibility: visible;
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
+/* CHECKOUT STYLES */
+
+.Cart {
+    flex-basis: 30%;
+    margin-right: 30px;
+}
+
+.cartHeader {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+
+.cartHeader h3 {
+    font-size: 1.6rem;
+}
+
+.cartHeader .fas {
+    font-size: 2rem;
+    color: #292f33;
+}
+
+.Cart ul li {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.Cart .Price {
+    font-weight: 700;
+}
+
+.Cart .Item {
+    flex-basis: 25%;
+}
+
+button .fa-times-circle {
+    font-size: 1.2rem;
+    color:  #da281c;
+}
+
+button .Remove {
+    font-size: 0.8rem;
+    margin-left: 2px;
 }
