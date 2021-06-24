@@ -149,6 +149,7 @@ main {
     flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 80px;
+    margin-bottom: 40px;
 }
 
 .Store ul li {
@@ -285,5 +286,120 @@ button .fa-times-circle {
 button .Remove {
     font-size: 0.8rem;
     margin-left: 2px;
-    color: green;
 }
+
+/* Media queries */
+
+@media (max-width: 900px) {
+    .flexHeader {
+        flex-direction: column;
+        gap: 0;
+        padding-top: 100px;
+        margin-bottom: 80px;
+    }
+
+    main {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .storeHeader {
+        margin: 20px 0 20px 30px;
+    }
+    
+    .Store,
+    .Cart {
+        margin: 20px 0;
+    }
+    
+    .Store,
+    .Cart {
+        margin: 20px 30px;
+    }
+    
+    .Store ul {
+        gap: 40px;
+    }
+
+    .Cart {
+        min-height: 20vh;
+    }
+    
+    .cartHeader {
+        margin: 20px 0;
+        align-items: center;
+    }
+    
+    .cartHeader .fas {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .flexHeader {
+        height: auto;
+        padding-top: 40px;
+        margin-bottom: 0;
+    }
+
+    .storeHeader {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 5px;
+    }
+    
+    .storeHeader h1 {
+        text-transform: uppercase;
+        font-size: 1.8rem;
+    }
+    
+    .storeHeader img {
+        width: 50px;
+    }
+
+    .Store ul {
+        gap: 20px;
+        margin: 0 10px 20px 10px;
+    }
+    
+    .Store h3 {
+        text-align: center;
+    }
+    
+    .imgContainer {
+        width: 125px;
+        min-width: 100px;
+        margin: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    .flexHeader {
+        margin: 0 20px;
+    }
+    
+    header h2 {
+        font-size: 3rem;
+        line-height: 3.2rem;
+    }
+    
+    header p {
+        text-align: left;
+    }   
+    .flexHeader {
+        height: auto;
+        padding-top: 40px;
+        margin-bottom: 0;
+    }
+
+    .Store {
+        width: 90%;
+        margin: 10px 0px 10px 10px;
+    }
+
+    .storeHeader {
+        margin-left: 15px;
+    }
+}
+

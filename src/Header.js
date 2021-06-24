@@ -1,4 +1,6 @@
 
+import {Link} from 'react-scroll';
+
 function Header() {
     return (
         <header>
@@ -10,7 +12,7 @@ function Header() {
             </div>
           </div>
           <div className = "headerIcon">
-            <a href="#main"><i className="fas fa-chevron-down"></i></a>
+            <a href=""><Link to="main" smooth={true} activeClass="active" spy={true}><i className="fas fa-chevron-down"></i></Link></a>
           </div>  
         </header>
     )
