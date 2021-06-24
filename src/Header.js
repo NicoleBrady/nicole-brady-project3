@@ -7,8 +7,8 @@ function Header() {
           <div className = "flexHeader wrapper">
             <h2>What Would You Buy?</h2>
             <div className = 'introText'>
-              <p>orizzle fo shizzle dolizzle sit gangsta, tellivizzle adipiscing nizzle. Get down get down phat velizzle, the bizzle volutpizzle, shiz quizzle, fo shizzle mah nizzle fo rizzle, mah home g-dizzle vizzle, shiznit. Pellentesque bling bling tortor. Away eros. I saw beyonces tizzles and my pizzle went crizzle izzle the bizzle dapibus stuff tempizzle cool. Mauris pellentesque nibh izzle turpizzle.</p>
-              <p>orizzle fo shizzle dolizzle sit gangsta, tellivizzle adipiscing nizzle. Get down get down phat velizzle, the bizzle volutpizzle, shiz quizzle, fo shizzle mah nizzle fo rizzle, mah home g-dizzle vizzle, shiznit. Pellentesque bling bling tortor. Away eros. I saw beyonces tizzles and my pizzle went crizzle izzle the bizzle dapibus stuff tempizzle cool. Mauris pellentesque nibh izzle turpizzle.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
             </div>
           </div>
           <div className = "headerIcon">

@@ -10,7 +10,7 @@ function App() {
 
 const [groceryItems, setGroceryItems] = useState([]);
 const [checkoutItems, setCheckoutItems] = useState([]);
-const [remove, setRemove] = useState(checkoutItems);
+
 
 
 // create function for when an item is clicked, that item is pushed to setCheckoutItems array
@@ -27,11 +27,11 @@ setCheckoutItems([...current, item]);
 }
 
 // function to remove items from cart
+// const [remove, setRemove] = useState(checkoutItems);
 // const removeItems = (item) => {
 //   const remainingItems = checkoutItems.filter((item) => item !== key)
 //   setRemove(remainingItems);
 //   console.log(remainingItems);
-  
 // }
 
 
@@ -105,7 +105,7 @@ setGroceryItems(itemArray);
           </ul>
         </aside>
       </main>
-      
+      <footer>Created at <a href="https://junocollege.com" target="_blank" rel="noopener">Juno College</a></footer>
     </div>
   );
 }
@@ -113,7 +113,7 @@ setGroceryItems(itemArray);
 export default App;
 
 
-// var total = checkoutItems.reduce(function(previousValue, currentValue) {
+// const total = checkoutItems.reduce(function(previousValue, currentValue) {
 //   return {
 //     price: previousValue.price + currentValue.price,
 //   }
