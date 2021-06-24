@@ -10,7 +10,7 @@ function Header() {
             </div>
           </div>
           <div className = "headerIcon">
-            <a href="#main"><i class="fas fa-chevron-down"></i></a>
+            <a href="#main"><i className="fas fa-chevron-down"></i></a>
           </div>  
         </header>
     )

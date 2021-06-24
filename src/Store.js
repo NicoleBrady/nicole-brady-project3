@@ -1,7 +1,8 @@
 import { useState } from 'react';
 
 
-function Store(props) {
+// function Store(props) {
+function Store ({imgSrc, price, id, name, addToCart}) {
 
 const [isActive, setActive] = useState("false");
 const handleActive = () => {
@@ -9,16 +10,16 @@ setActive(!isActive);
 };
     
 return (
-    <li key = { props.id }>
+    <li key = { id }>
         <div className = "imgContainer">
-            <img src = { props.imgSrc } alt = { props.key }></img>
+            <img src = { imgSrc } alt = { id }></img>
         </div>
-        <h3>{ props.name }</h3>
+        <h3>{ name }</h3>
         <div className = "detailsContainer">
             <div className = "priceContainer">
-                <p>{ `$${props.price}` }</p>
+                <p>{ `$${price}` }</p>
             </div>
-            <button className = "message" onClick = { () => { props.addToCart(); handleActive() }}>
+            <button className = "message" onClick = { () => { addToCart(); handleActive() }}>
                 <i className={isActive ? "fas fa-plus" : "fas fa-plus"} ></i>
                 <span className= {isActive ? "popupMessage hidden" : "popupMessage show"}>Added to Cart!</span>
             </button> 

@@ -6,9 +6,9 @@ function Checkout(props) {
     <li key = { props.id }>
     <p className = "Item" >{ props.name }</p>
     <p className = "Price">{ `$${props.price}` }</p>
-    <button>
-        <i class="fas fa-times-circle"></i>
-        <span class="Remove">Remove Item</span>
+    <button onClick = { props.removeItems }>
+        <i className="fas fa-times-circle"></i>
+        <span className="Remove">Remove Item</span>
     </button>
 
 

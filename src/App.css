@@ -285,4 +285,5 @@ button .fa-times-circle {
 button .Remove {
     font-size: 0.8rem;
     margin-left: 2px;
+    color: green;
 }

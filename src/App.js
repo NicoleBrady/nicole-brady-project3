@@ -10,19 +10,30 @@ function App() {
 
 const [groceryItems, setGroceryItems] = useState([]);
 const [checkoutItems, setCheckoutItems] = useState([]);
+const [remove, setRemove] = useState(checkoutItems);
 
 
 // create function for when an item is clicked, that item is pushed to setCheckoutItems array
 useEffect ( () => {
-
+  
 }, [checkoutItems])
 
+// function to add to cart
 const addToCart = (item) => {
   
 const current = [...checkoutItems]
 
 setCheckoutItems([...current, item]);
 }
+
+// function to remove items from cart
+// const removeItems = (item) => {
+//   const remainingItems = checkoutItems.filter((item) => item !== key)
+//   setRemove(remainingItems);
+//   console.log(remainingItems);
+  
+// }
+
 
 useEffect ( () => {
 // reference to firebase database
@@ -52,7 +63,7 @@ setGroceryItems(itemArray);
       <main id = "main">
         <section className="Store">
           <div className = "storeHeader">
-            <img src = {logo} ></img>
+            <img src = {logo} alt = "no thrills" ></img>
             <h1><span>No</span>Thrills</h1>
           </div>
           <ul>
@@ -66,7 +77,6 @@ setGroceryItems(itemArray);
                   name = { item.key }
                   id = { item.key }
                   addToCart = { () => addToCart(item)}
-                  // isActive = { isActive }
                   />
                 )
               })
@@ -87,7 +97,7 @@ setGroceryItems(itemArray);
                   key = { item.key }
                   name = { item.key }
                   id = { item.key }
-                  // addToCart = { () => addToCart(item) }
+                  // removeItems = { () => removeItems(item)}
                   />
                 )
               })
