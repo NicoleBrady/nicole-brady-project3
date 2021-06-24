@@ -3,6 +3,7 @@ import {Link} from 'react-scroll';
 
 function Header() {
     return (
+      // This header is supposed to be incorporated with my stretch goals and to explain the purpose of the project...will get to stretch goals later
         <header>
           <div className = "flexHeader wrapper">
             <h2>What Would You Buy?</h2>
