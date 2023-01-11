@@ -121,6 +121,8 @@ export default App;
 // }, 0);
 // console.log(total)
 
+// console.log(test);
+
 
 
 
