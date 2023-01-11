@@ -1,15 +1,14 @@
 
 import {Link} from 'react-scroll';
+import wallet from './wallet.png';
 
 function Header() {
     return (
-      // This header is supposed to be incorporated with my stretch goals and to explain the purpose of the project...will get to stretch goals later
         <header>
           <div className = "flexHeader wrapper">
             <h2>What Would You Buy?</h2>
-            <div className = 'introText'>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+            <div className = 'headerImg'>
+            <img src={wallet} alt="graphic of wallet with money" />
             </div>
           </div>
           <div className = "headerIcon">

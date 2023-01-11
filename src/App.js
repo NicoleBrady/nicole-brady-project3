@@ -27,12 +27,13 @@ setCheckoutItems([...current, item]);
 }
 
 // function to remove items from cart
-// const [remove, setRemove] = useState(checkoutItems);
-// const removeItems = (item) => {
-//   const remainingItems = checkoutItems.filter((item) => item !== key)
-//   setRemove(remainingItems);
-//   console.log(remainingItems);
-// }
+const [remove, setRemove] = useState(checkoutItems);
+const removeItems = (item) => {
+  const remainingItems = checkoutItems.filter((item) => item !== item)
+  setRemove(remainingItems);
+  console.log(remainingItems);
+}
+
 
 
 useEffect ( () => {
@@ -105,7 +106,7 @@ setGroceryItems(itemArray);
           </ul>
         </aside>
       </main>
-      <footer>Created at <a href="https://junocollege.com" target="_blank" rel="noopener">Juno College</a></footer>
+      <footer>Created at <a href="https://junocollege.com" target="_blank" rel="noref">Juno College</a></footer>
     </div>
   );
 }
